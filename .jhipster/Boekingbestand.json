@@ -1,0 +1,33 @@
+{
+  "name": "Boekingbestand",
+  "fields": [
+    {
+      "fieldName": "kenmerk",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "label",
+      "fieldType": "Label",
+      "fieldValues": "CZ,OHRA"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "record",
+      "otherEntityRelationshipName": "boekingbestand",
+      "relationshipName": "record"
+    }
+  ],
+  "changelogDate": "20210311151038",
+  "entityTableName": "boekingbestand",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
