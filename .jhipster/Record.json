@@ -1,0 +1,45 @@
+{
+  "name": "Record",
+  "fields": [
+    {
+      "fieldName": "debiteur",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "veroorzaker",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "overeenkomst",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datumIngang",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datumEinde",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "boekingbestand",
+      "otherEntityRelationshipName": "record",
+      "relationshipName": "boekingbestand",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210311145802",
+  "entityTableName": "record",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
