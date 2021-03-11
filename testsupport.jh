@@ -1,0 +1,40 @@
+
+entity Boekingbestand {
+	kenmerk String
+    label Label
+}
+
+entity Record {
+	debiteur String
+    veroorzaker String
+    overeenkomst String
+    datumIngang String
+    datumEinde String
+    
+}
+
+enum Label {
+    CZ, OHRA
+}
+
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Boekingbestand to Record{Boekingbestand}
+	
+}
+
+
+// Set pagination options
+paginate Record with infinite-scroll
+paginate Boekingbestand with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
